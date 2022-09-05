@@ -27,15 +27,44 @@ def read_projects(i, userdata):
         projects[projects_count-1][k] = v
     return i, projects
 
-def read_technologies(i, userdata):
-    return (i+1, userdata)
-def read_tools(i, userdata):
-    return (i+1, userdata)
-def read_languages(i, userdata):
-    return (i+1, userdata)
+
+def read_list(i, userdata, tag):
+    list_items = []
+    for item in userdata[i+1:]:
+        (k, v) = get_keyval(item)
+        i += 1
+        if k == tag:
+            break
+        list_items += [v]
+    return i, list_items
+
+
+def gen_tex_for_projects(projects):
+    res = ""
+    with open("tex_templates/project") as file:
+        project_template = file.read()
+    for project in projects:
+        tmp = project_template
+        for k, v in project.items():
+            tmp = tmp.replace(tokenize(k), v)
+        res += tmp
+    return res
+
+def gen_tex_for_list(items):
+    res = ""
+    with open("tex_templates/list") as file:
+        list_template = file.read()
+    with open("tex_templates/item") as file:
+        item_template = file.read()
+    item_list = ""
+    for item in items:
+        item_list += item_template.replace(tokenize("item"), item)
+    item_list = list_template.replace(tokenize("itemlist"), item_list)
+    return item_list
+        
 
 def main():
-    with open("tex_src") as file:
+    with open("tex_templates/main") as file:
         output = file.read()
 
     with open("cv_data") as file:
@@ -47,28 +76,28 @@ def main():
     projects_count = 0
     projects = [dict()]
 
+    itemize = {"technologies": [], "tools": [], "languages": []}
+
     i = 0
     while i < len(userdata):
         item = userdata[i]
         (k, v) = get_keyval(item)
         if k == "projects":
             i, projects = read_projects(i, userdata)
-        elif k == "technologies":
-            i, technologies = read_technologies(i, userdata)
-        elif k == "tools":
-            i, tools = read_tools(i, userdata)
-        elif k == "languages":
-            i, languages = read_languages(i, userdata)
+        elif k in ["technologies", "tools", "languages"]:
+            i, itemize[k] = read_list(i, userdata, k)
         else:
             keyvals[k] = v
         i += 1
 
-    print(projects)
-    print(keyvals)
+    
+    keyvals["projects"] = gen_tex_for_projects(projects)
+    for k, v in itemize.items():
+        keyvals[k] = gen_tex_for_list(v)
 
     output = substitute(keyvals, output)
 
-    # print(output)
+    print(output)
 
 if __name__ == '__main__':
     main()
