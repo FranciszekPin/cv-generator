@@ -1,17 +1,20 @@
-#! /bin/python 
+#! /bin/python
 # gen.py -- generates latex source of CV
 
 def get_keyval(s):
     splitted = s.split('@')
     return (splitted[0], splitted[1][1:])
 
+
 def tokenize(s):
     return "==" + s + "=="
+
 
 def substitute(keyvals, output):
     for k, v in keyvals.items():
         output = output.replace(tokenize(k), v)
     return output
+
 
 def read_projects(i, userdata):
     projects = []
@@ -50,6 +53,7 @@ def gen_tex_for_projects(projects):
         res += tmp
     return res
 
+
 def gen_tex_for_list(items):
     res = ""
     with open("tex_templates/list") as file:
@@ -61,7 +65,7 @@ def gen_tex_for_list(items):
         item_list += item_template.replace(tokenize("item"), item)
     item_list = list_template.replace(tokenize("itemlist"), item_list)
     return item_list
-        
+
 
 def main():
     with open("tex_templates/main") as file:
@@ -90,7 +94,6 @@ def main():
             keyvals[k] = v
         i += 1
 
-    
     keyvals["projects"] = gen_tex_for_projects(projects)
     for k, v in itemize.items():
         keyvals[k] = gen_tex_for_list(v)
@@ -99,6 +102,6 @@ def main():
 
     print(output)
 
+
 if __name__ == '__main__':
     main()
-
