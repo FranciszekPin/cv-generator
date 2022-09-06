@@ -2,7 +2,7 @@
 # gen.py -- generates latex source of CV
 
 def get_keyval(s):
-    splitted = s.split('@')
+    splitted = s.split('$')
     return (splitted[0], splitted[1][1:])
 
 
