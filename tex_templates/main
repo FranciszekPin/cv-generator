@@ -1,9 +1,10 @@
-\documentclass[paper=a4,fontsize=9.5pt]{scrartcl}
+\documentclass[paper=a4,fontsize=10pt]{scrartcl}
 
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 
 \usepackage{multicol}
+\RequirePackage{fontawesome}
 
 \frenchspacing
 
@@ -44,7 +45,7 @@
 	
 	==email==
 
-        \href{==githublink==}{==githubname==}
+        \href{==githublink==}{==githubname== \faExternalLink} 
 
 	==phonenumber==
 
@@ -76,5 +77,5 @@
 ==languages==
     
     \vspace*{0.22in}
-    \tiny ==rodoclausule==
+    \small ==rodoclausule==
 \end{document}
