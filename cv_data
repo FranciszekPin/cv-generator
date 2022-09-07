@@ -1,30 +1,30 @@
-name@ Johny Good
-description@ Some description for Johny Good's CV
-email@ johny.good@gmail.com
-gihublink@ linktogithub.com
-githubname@ github.com/johny
-phonenumber@ 999999999
-address@ Fake street 86 New York
-educationdate@ May 2018 till now
-educationdescription@ Student of University of California
-projects@
-link@ google.com
-name@ Browser
-description@ Simple browser for surfing the internet.
-link@ amazon.com
-name@ Amazon
-description@ Simple online shopping site.
-projects@
-technologies@
-item@ Java
-item@ Visual Basic
-technologies@
-tools@
-item@ Windows :((((
-item@ cmd
-tools@
-languages@
-item@ english
-item@ germany
-languages@
-rodoclausule@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean placerat leo lacus, eget ultrices tellus fermentum eget. Phasellus risus mauris, ullamcorper a elit id, tincidunt sagittis justo. Aliquam sem risus, ultricies id purus at, pulvinar gravida mi.
+name$ Johny Good
+description$ Some description for Johny Good's CV. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean placerat leo lacus, eget ultrices tellus fermentum eget. Phasellus risus mauris, ullamcorper a elit id, tincidunt sagittis justo. Aliquam sem risus, ultricies id purus at, pulvinar gravida mi.
+email$ johny.good@gmail.com
+gihublink$ linktogithub.com
+githubname$ github.com/johny
+phonenumber$ 999999999
+address$ Fake street 86 New York
+educationdate$ May 2018 till now
+educationdescription$ Student of University of California
+projects$
+link$ google.com
+name$ Browser
+description$ Simple browser for surfing the internet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean placerat leo lacus, eget ultrices tellus fermentum eget. Phasellus risus mauris, ullamcorper a elit id, tincidunt sagittis justo. Aliquam sem risus, ultricies id purus at, pulvinar gravida mi.
+link$ amazon.com
+name$ Amazon
+description$ Simple online shopping site. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean placerat leo lacus, eget ultrices tellus fermentum eget. Phasellus risus mauris, ullamcorper a elit id, tincidunt sagittis justo. Aliquam sem risus, ultricies id purus at, pulvinar gravida mi.
+projects$
+technologies$
+item$ Java
+item$ Visual Basic
+technologies$
+tools$
+item$ Windows :((((
+item$ cmd
+tools$
+languages$
+item$ english
+item$ germany
+languages$
+rodoclausule$ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean placerat leo lacus, eget ultrices tellus fermentum eget. Phasellus risus mauris, ullamcorper a elit id, tincidunt sagittis justo. Aliquam sem risus, ultricies id purus at, pulvinar gravida mi.
