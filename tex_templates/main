@@ -44,7 +44,7 @@
 	
 	==email==
 
-        \href{==github_link==}{==githubname==}
+        \href{==githublink==}{==githubname==}
 
 	==phonenumber==
 
@@ -69,12 +69,12 @@
     \subsection*{Technologies}
 ==technologies==
 
-    \subsection*{Tools I use}
+    \subsection*{Tools}
 ==tools==
 
     \subsection*{Languages}
 ==languages==
     
     \vspace*{0.22in}
-    \small ==rodoclausule==
+    \tiny ==rodoclausule==
 \end{document}
