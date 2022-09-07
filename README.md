@@ -3,6 +3,8 @@
 Script for generating latex CV document
 The idea is not to write latex, but only to edit `cv_data` which is simple text file.
 
+![document screenshot](img/screenshot.png)
+
 ## Usage
 
 `cv_data` consists of key - value pairs in following format:
