@@ -66,6 +66,7 @@ def gen_tex_for_list(items):
     item_list = list_template.replace(tokenize("itemlist"), item_list)
     return item_list
 
+item_list_names = ["technologies", "tools", "languages"]
 
 def main():
     with open("tex_templates/main") as file:
@@ -80,7 +81,7 @@ def main():
     projects_count = 0
     projects = [dict()]
 
-    itemize = {"technologies": [], "tools": [], "languages": []}
+    itemize = { item_name : [] for item_name in item_list_names}
 
     i = 0
     while i < len(userdata):
@@ -88,7 +89,7 @@ def main():
         (k, v) = get_keyval(item)
         if k == "projects":
             i, projects = read_projects(i, userdata)
-        elif k in ["technologies", "tools", "languages"]:
+        elif k in item_list_names:
             i, itemize[k] = read_list(i, userdata, k)
         else:
             keyvals[k] = v
