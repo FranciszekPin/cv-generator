@@ -10,10 +10,10 @@ The idea is not to write latex, but only to edit `cv_data` which is a simple tex
 `cv_data` consists of key-value pairs in the following format:
 
 ```
-key@ value
-key@ value
+key$ value
+key$ value
 ...
-key@ value
+key$ value
 ```
 
 It allows you to specify name, email, etc.
@@ -22,15 +22,15 @@ It allows you to specify name, email, etc.
 For realized projects data should be organized in the following format:
 
 ```
-projects@
-link@ link to your project1
-name@ name of your project1
-description@ description of your project1
+projects$
+link$ link to your project1
+name$ name of your project1
+description$ description of your project1
 ...
-link@ link to your project2
-name@ name of your project2
-description@ description of your project2
-projects@
+link$ link to your project2
+name$ name of your project2
+description$ description of your project2
+projects$
 ```
 Similarly, you can specify technologies, tools, and languages.
 
